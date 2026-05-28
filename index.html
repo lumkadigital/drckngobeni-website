@@ -198,7 +198,7 @@
     ══════════════════════════════ */
     .hero {
       min-height: 100vh;
-      background: linear-gradient(160deg, var(--green-deep) 0%, var(--green-dark) 50%, #1e6640 100%);
+      background: linear-gradient(135deg, #f8faf8 0%, #ffffff 45%, #f2f6f3 100%);
       display: flex;
       align-items: center;
       position: relative;
@@ -210,7 +210,7 @@
       position: absolute;
       top: -15%; right: -8%;
       width: 60vw; height: 90vh;
-      background: radial-gradient(ellipse at 70% 30%, rgba(201,168,76,0.07) 0%, transparent 65%);
+      background: radial-gradient(ellipse at 75% 25%, rgba(122,173,58,0.07) 0%, transparent 60%), radial-gradient(ellipse at 15% 75%, rgba(201,168,76,0.05) 0%, transparent 55%);
       pointer-events: none;
     }
     /* Bottom fade into white */
@@ -219,7 +219,7 @@
       position: absolute;
       bottom: 0; left: 0; right: 0;
       height: 100px;
-      background: linear-gradient(to top, rgba(255,255,255,0.05), transparent);
+      background: linear-gradient(to top, rgba(242,246,243,0.6), transparent);
       pointer-events: none;
     }
     /* Doctor photo frame — right side */
@@ -246,9 +246,9 @@
       object-position: center top;
       display: block;
       mask-image: linear-gradient(to right, transparent 0%, black 18%, black 85%, transparent 100%),
-                  linear-gradient(to top, transparent 0%, black 6%);
+                  linear-gradient(to top, transparent 0%, black 8%);
       -webkit-mask-image: linear-gradient(to right, transparent 0%, black 18%, black 85%, transparent 100%),
-                           linear-gradient(to top, transparent 0%, black 6%);
+                           linear-gradient(to top, transparent 0%, black 8%);
       mask-composite: intersect;
       -webkit-mask-composite: source-in;
     }
@@ -259,7 +259,7 @@
       top: 15%; bottom: 15%;
       right: 0;
       width: 3px;
-      background: linear-gradient(to bottom, transparent, var(--gold), transparent);
+      background: linear-gradient(to bottom, transparent, var(--green), transparent);
       z-index: 2;
     }
 
@@ -277,9 +277,9 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      border: 1px solid rgba(201,168,76,0.45);
-      background: rgba(201,168,76,0.09);
-      color: var(--gold-light);
+      border: 1px solid rgba(122,173,58,0.3);
+      background: rgba(122,173,58,0.06);
+      color: var(--green);
       font-size: 0.72rem;
       font-weight: 700;
       letter-spacing: 0.16em;
@@ -291,24 +291,27 @@
     .hero-badge-dot {
       width: 6px; height: 6px;
       border-radius: 50%;
-      background: var(--gold);
+      background: var(--green);
     }
     .hero h1 {
       font-family: var(--font-head);
       font-size: clamp(2.8rem, 5vw, 5rem);
       font-weight: 800;
-      color: var(--white);
+      color: var(--dark);
       line-height: 1.07;
       margin-bottom: 22px;
     }
     .hero h1 em {
       font-style: italic;
+      color: var(--green);
+    }
+    .hero h1 em:last-child {
       color: var(--gold);
     }
     .hero-sub {
       font-size: 1.1rem;
       font-weight: 400;
-      color: rgba(255,255,255,0.74);
+      color: rgba(17,17,17,0.68);
       max-width: 480px;
       line-height: 1.75;
       margin-bottom: 44px;
@@ -323,8 +326,8 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      background: var(--gold);
-      color: var(--dark);
+      background: var(--green);
+      color: var(--white);
       font-family: var(--font-body);
       font-size: 0.88rem;
       font-weight: 700;
@@ -332,17 +335,17 @@
       text-transform: uppercase;
       padding: 16px 34px;
       border-radius: 2px;
-      border: 2px solid var(--gold);
+      border: 2px solid var(--green);
       cursor: pointer;
       transition: all 0.3s;
     }
-    .btn-gold:hover { background: #b59038; border-color: #b59038; transform: translateY(-2px); }
+    .btn-gold:hover { background: #245f3c; border-color: #245f3c; transform: translateY(-2px); }
     .btn-ghost {
       display: inline-flex;
       align-items: center;
       gap: 10px;
       background: transparent;
-      color: var(--white);
+      color: var(--green);
       font-family: var(--font-body);
       font-size: 0.88rem;
       font-weight: 600;
@@ -350,32 +353,32 @@
       text-transform: uppercase;
       padding: 16px 34px;
       border-radius: 2px;
-      border: 2px solid rgba(255,255,255,0.38);
+      border: 2px solid rgba(122,173,58,0.4);
       cursor: pointer;
       transition: all 0.3s;
     }
-    .btn-ghost:hover { border-color: rgba(255,255,255,0.75); background: rgba(255,255,255,0.06); transform: translateY(-2px); }
+    .btn-ghost:hover { border-color: rgba(17,17,17,0.65); background: rgba(255,255,255,0.06); transform: translateY(-2px); }
 
     /* quick-stats row inside hero */
     .hero-stats {
       display: flex;
       gap: 40px;
       padding-top: 40px;
-      border-top: 1px solid rgba(255,255,255,0.12);
+      border-top: 1px solid rgba(122,173,58,0.15);
     }
     .hero-stat-label {
       font-size: 0.72rem;
       font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.5);
+      color: rgba(17,17,17,0.35);
       margin-bottom: 4px;
     }
     .hero-stat-val {
       font-family: var(--font-head);
       font-size: 1.6rem;
       font-weight: 700;
-      color: var(--gold);
+      color: var(--green);
     }
 
     /* Scroll cue */
@@ -384,7 +387,7 @@
       bottom: 36px; left: 50%;
       transform: translateX(-50%);
       display: flex; flex-direction: column; align-items: center; gap: 8px;
-      color: rgba(255,255,255,0.35);
+      color: rgba(17,17,17,0.35);
       font-size: 0.68rem;
       letter-spacing: 0.14em;
       text-transform: uppercase;
@@ -436,7 +439,7 @@
     .trust-item-text {
       font-size: 0.83rem;
       font-weight: 600;
-      color: rgba(255,255,255,0.82);
+      color: rgba(17,17,17,0.72);
       line-height: 1.45;
     }
     .trust-item-sub {
@@ -1229,7 +1232,7 @@
     .footer-col li { margin-bottom: 10px; }
     .footer-col a {
       font-size: 0.87rem;
-      color: rgba(255,255,255,0.5);
+      color: rgba(255,255,255,0.52);
       transition: color 0.25s;
     }
     .footer-col a:hover { color: var(--white); }
@@ -1321,7 +1324,21 @@
       .cond-grid { grid-template-columns: 1fr; }
       .affiliations-row { gap: 18px; }
     }
-  </style>
+  
+    /* Option B — Hero green overrides to match logo green #7aad3a */
+    .hero .hero-badge { border-color: rgba(122,173,58,0.35); background: rgba(122,173,58,0.07); }
+    .hero .hero-badge-dot { background: #7aad3a; }
+    .hero h1 em { color: #7aad3a; }
+    .hero h1 em:last-child { color: var(--gold); }
+    .hero .btn-gold { background: #7aad3a; border-color: #7aad3a; color: #fff; }
+    .hero .btn-gold:hover { background: #618e2e; border-color: #618e2e; }
+    .hero .btn-ghost { color: #7aad3a; border-color: rgba(122,173,58,0.45); }
+    .hero .hero-stat-val { color: #7aad3a; }
+    .hero .hero-stats { border-top-color: rgba(122,173,58,0.15); }
+    .hero .hero-img-line { background: linear-gradient(to bottom, transparent, #7aad3a, transparent); }
+    .hero .hero-sub { color: rgba(17,17,17,0.65); }
+
+    </style>
 </head>
 <body>
 
@@ -1955,7 +1972,7 @@
             <div class="bk-info"><i class="fa fa-map-marker-alt"></i><span><strong>Nelspruit:</strong> 6 Ehmke Street, Mlondozi House, Suite 106</span></div>
             <div class="bk-info"><i class="fa fa-map-marker-alt"></i><span><strong>White River:</strong> 8 Cypress Point Close, Hanya House, White River 1240</span></div>
             <div class="bk-info"><i class="fa fa-phone"></i><span><strong>Nelspruit:</strong> +27 13 753 2770</span></div>
-            <div class="bk-info"><i class="fa fa-phone"></i><span><strong>White River:</strong> +27 68 494 6621</span></div>
+            <div class="bk-info"><i class="fa fa-phone"></i><span><strong>White River:</strong> +27 68 952 8295</span></div>
             <div class="bk-info"><i class="fa fa-exclamation-circle"></i><span>Emergencies: +27 13 759 0500</span></div>
             <div class="bk-info"><i class="fa fa-fax"></i><span>Fax: 087 654 1444</span></div>
             <div class="bk-info"><i class="fa fa-envelope"></i><span>drckreception@yahoo.com</span></div>
@@ -2146,7 +2163,7 @@
                 <div class="ci-icon"><i class="fa fa-phone"></i></div>
                 <div>
                   <div class="ci-label">Reception</div>
-                  <div class="ci-val"><a href="tel:+27684946621">+27 68 494 6621</a></div>
+                  <div class="ci-val"><a href="tel:+27689528295">+27 68 952 8295</a></div>
                 </div>
               </div>
               <div class="ci">
@@ -2238,7 +2255,7 @@
           <div class="footer-col-title">Contact</div>
           <ul>
             <li><a href="tel:+27137532770">Nelspruit: +27 13 753 2770</a></li>
-            <li><a href="tel:+27684946621">White River: +27 68 494 6621</a></li>
+            <li><a href="tel:+27689528295">White River: +27 68 952 8295</a></li>
             <li><a href="tel:+27137590500">Emergency: +27 13 759 0500</a></li>
             <li><a href="mailto:drckreception@yahoo.com">drckreception@yahoo.com</a></li>
             <li style="color:rgba(255,255,255,0.35); font-size:0.82rem; line-height:1.7; margin-top:4px;">
